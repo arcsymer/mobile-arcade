@@ -1,0 +1,27 @@
+# Unity generated folders. A bare "Name/" matches that directory at any depth.
+Library/
+Temp/
+Obj/
+obj/
+Logs/
+UserSettings/
+MemoryCaptures/
+.vs/
+
+# Raw Unity build output. The shippable WebGL player is copied into web/<game>/ instead;
+# this scratch dir (and the big Windows build) is not committed.
+Builds/
+
+# Generated C# project files
+*.csproj
+*.sln
+*.unityproj
+*.user
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# The served WebGL players under web/<game>/ are committed on purpose.
+# Their inner "Build/" folder (singular) is not matched by "Builds/" above.
