@@ -14,7 +14,7 @@ big game. Original art and audio, all generated procedurally (no imported assets
 | Game | Mechanic | Status | Play |
 |------|----------|--------|------|
 | **STARDODGE** | endless dodge — weave through falling meteors | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/stardodge/) |
-| *(game 2)* | tap-timing | ⏳ in progress | — |
+| **STAK** | tap-timing — drop blocks, slice the overhang, stack high | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/stak/) |
 | *(game 3)* | merge / grow | ⏳ in progress | — |
 | *(game 4)* | reflex / whack | ⏳ in progress | — |
 
@@ -25,6 +25,14 @@ Steer a glowing craft left/right (hold/drag anywhere) to weave through meteors t
 and thicker the longer you survive. Score by distance; beat your best. Tap to start, tap to retry.
 Juice: screen shake + a particle burst on impact, a starfield, synthesised blips. There's also an
 **attract mode** (`?demo=1`) where the craft auto-pilots and dodges on its own.
+
+### STAK
+![STAK gameplay](media/stak.gif)
+
+A one-thumb tap-timing stacker: a block slides above the tower — tap to drop it, and the part that
+overhangs the block below is **sliced off** (a falling sliver), so the tower narrows and the timing
+gets tighter as you climb. Perfect drops flash and shake; the camera rises with the tower. Stack as
+high as you can; tap to retry.
 
 ## How they're built
 
