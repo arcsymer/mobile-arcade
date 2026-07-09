@@ -15,7 +15,7 @@ big game. Original art and audio, all generated procedurally (no imported assets
 |------|----------|--------|------|
 | **STARDODGE** | endless dodge — weave through falling meteors | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/stardodge/) |
 | **STAK** | tap-timing — drop blocks, slice the overhang, stack high | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/stak/) |
-| *(game 3)* | merge / grow | ⏳ in progress | — |
+| **GOBBLE** | grow — eat smaller blobs, dodge bigger ones | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/gobble/) |
 | *(game 4)* | reflex / whack | ⏳ in progress | — |
 
 ### STARDODGE
@@ -33,6 +33,13 @@ A one-thumb tap-timing stacker: a block slides above the tower — tap to drop i
 overhangs the block below is **sliced off** (a falling sliver), so the tower narrows and the timing
 gets tighter as you climb. Perfect drops flash and shake; the camera rises with the tower. Stack as
 high as you can; tap to retry.
+
+### GOBBLE
+![GOBBLE gameplay](media/gobble.gif)
+
+A one-thumb eat-and-grow game: drag your blob around to swallow blobs **smaller** than you (you
+grow, area-based), while dodging the **bigger** ones — touch one and it's over. As you grow, blobs
+that used to be threats become food, so the arena keeps shifting. Score by mass; tap to retry.
 
 ## How they're built
 
