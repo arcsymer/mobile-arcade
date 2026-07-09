@@ -85,8 +85,11 @@ public class Game : MonoBehaviour
                 float k = 1f - age / tg.life;
                 if (k <= 0f)
                 {
-                    if (!tg.bomb) LoseLife(tg.t.position);
-                    Destroy(tg.t.gameObject); targets.RemoveAt(i); continue;
+                    Vector3 at = tg.t.position; bool wasBomb = tg.bomb;
+                    Destroy(tg.t.gameObject); targets.RemoveAt(i);
+                    if (!wasBomb) LoseLife(at);
+                    if (state != St.Play) return;   // LoseLife may have ended the game (ClearTargets emptied the list)
+                    continue;
                 }
                 // pop-in then shrink-out scale for readability + urgency
                 float appear = Mathf.Clamp01(age / 0.12f);
@@ -209,13 +212,13 @@ public class Game : MonoBehaviour
         if (state == St.Play || state == St.Over)
         {
             GUI.Label(new Rect(0, h * 0.03f, Screen.width, h * 0.08f), score.ToString(), big);
-            if (state == St.Play) GUI.Label(new Rect(0, h * 0.11f, Screen.width, h * 0.05f), new string('♥', Mathf.Max(0, lives)), mid);
+            if (state == St.Play) GUI.Label(new Rect(0, h * 0.11f, Screen.width, h * 0.05f), "LIVES  " + Mathf.Max(0, lives), mid);
         }
 
         if (state == St.Menu)
         {
             GUI.Label(new Rect(0, h * 0.28f, Screen.width, h * 0.12f), "WHACK", title);
-            GUI.Label(new Rect(0, h * 0.42f, Screen.width, h * 0.06f), "tap the dots • avoid the red ✕", small);
+            GUI.Label(new Rect(0, h * 0.42f, Screen.width, h * 0.06f), "tap the dots • avoid the red ones", small);
             if (Time.unscaledTime % 1f < 0.6f) GUI.Label(new Rect(0, h * 0.58f, Screen.width, h * 0.07f), "tap to play", mid);
             GUI.Label(new Rect(0, h * 0.92f, Screen.width, h * 0.05f), "built by @arcsymer", small);
         }

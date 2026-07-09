@@ -16,7 +16,7 @@ big game. Original art and audio, all generated procedurally (no imported assets
 | **STARDODGE** | endless dodge — weave through falling meteors | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/stardodge/) |
 | **STAK** | tap-timing — drop blocks, slice the overhang, stack high | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/stak/) |
 | **GOBBLE** | grow — eat smaller blobs, dodge bigger ones | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/gobble/) |
-| *(game 4)* | reflex / whack | ⏳ in progress | — |
+| **WHACK** | reflex — tap the dots, avoid the red ones | ✅ Live | [play](https://arcsymer.github.io/mobile-arcade/web/whack/) |
 
 ### STARDODGE
 ![StarDodge gameplay](media/stardodge.gif)
@@ -40,6 +40,13 @@ high as you can; tap to retry.
 A one-thumb eat-and-grow game: drag your blob around to swallow blobs **smaller** than you (you
 grow, area-based), while dodging the **bigger** ones — touch one and it's over. As you grow, blobs
 that used to be threats become food, so the arena keeps shifting. Score by mass; tap to retry.
+
+### WHACK
+![WHACK gameplay](media/whack.gif)
+
+A one-thumb reflex game: glowing dots pop up all over the screen — tap them before they shrink
+away, but never tap a **red** one. A good dot expiring costs a life (three lives); a red one is
+instant game over. Targets appear faster and live shorter the longer you last. Tap to retry.
 
 ## How they're built
 

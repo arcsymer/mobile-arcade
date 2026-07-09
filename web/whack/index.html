@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>WHACK — built by @arcsymer</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1a1220; overflow: hidden; }
+  #c { width: 100%; height: 100%; display: block; touch-action: none; background: #1a1220; }
+  #load { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: #d6b3e0; font: 600 16px -apple-system, Segoe UI, Roboto, sans-serif; background: #1a1220; letter-spacing: .05em; }
+</style>
+</head>
+<body>
+<canvas id="c" tabindex="-1"></canvas>
+<div id="load">loading…</div>
+<script src="Build/WebGL.loader.js"></script>
+<script>
+  var load = document.getElementById("load");
+  createUnityInstance(document.getElementById("c"), {
+    dataUrl: "Build/WebGL.data",
+    frameworkUrl: "Build/WebGL.framework.js",
+    codeUrl: "Build/WebGL.wasm",
+    streamingAssetsUrl: "StreamingAssets",
+    companyName: "arcsymer",
+    productName: "Whack",
+    productVersion: "1.0",
+    matchWebGLToCanvasSize: true,
+  }, function (p) { load.textContent = "loading " + Math.round(p * 100) + "%"; })
+    .then(function (u) { window.unityInstance = u; load.style.display = "none"; })
+    .catch(function (e) { load.textContent = "error: " + e; });
+</script>
+</body>
+</html>
